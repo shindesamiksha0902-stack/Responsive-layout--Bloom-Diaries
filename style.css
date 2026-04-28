@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -24,11 +23,12 @@ body {
   padding: 20px;
 }
 
-/* Menu button */
+/* Menu button (hidden on desktop) */
 .menu-btn {
   font-size: 26px;
   cursor: pointer;
   margin-right: 15px;
+  display: none;
 }
 
 /* Layout */
@@ -37,13 +37,12 @@ body {
   min-height: 100vh;
 }
 
-/* Sidebar */
+/* Sidebar (desktop) */
 .sidebar {
   width: 250px;
   background: #ece9ff;
   padding: 20px;
   border-right: 1px solid #ddd6ff;
-  transition: 0.3s;
 }
 
 .sidebar h3 {
@@ -63,16 +62,12 @@ body {
   background: #ddd6ff;
 }
 
-/* Close button */
+/* Close button (hidden on desktop) */
 .close-btn {
-  font-size: 22px;
-  cursor: pointer;
-  display: block;
-  margin-bottom: 15px;
-  color: #5a4b81;
+  display: none;
 }
 
-/* Main content */
+/* Main */
 .main {
   flex: 1;
   background: #ffffff;
@@ -84,18 +79,17 @@ body {
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.main h3 {
-  margin-bottom: 15px;
-  color: #5a4b81;
-}
-
 /* Overlay */
 .overlay {
   display: none;
 }
 
-/* 📱 Mobile view */
+/* 📱 MOBILE VERSION */
 @media (max-width: 768px) {
+
+  .menu-btn {
+    display: block;
+  }
 
   .sidebar {
     position: fixed;
@@ -103,6 +97,14 @@ body {
     top: 0;
     height: 100%;
     z-index: 1000;
+    transition: 0.3s;
+  }
+
+  .close-btn {
+    display: block;
+    font-size: 22px;
+    cursor: pointer;
+    margin-bottom: 15px;
   }
 
   /* Show sidebar */
@@ -110,12 +112,10 @@ body {
     left: 0;
   }
 
-  /* Overlay active */
+  /* Overlay */
   #menu-toggle:checked ~ .overlay {
     display: block;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.3);

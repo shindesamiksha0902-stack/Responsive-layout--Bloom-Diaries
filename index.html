@@ -8,26 +8,34 @@
 </head>
 <body>
 
+<!-- Hidden checkbox -->
+<input type="checkbox" id="menu-toggle">
+
+<!-- Overlay -->
+<label for="menu-toggle" class="overlay"></label>
+
 <!-- Navbar -->
 <div class="navbar">
+  <label for="menu-toggle" class="menu-btn">☰</label>
   <h1>The Bloom Diaries</h1>
 </div>
 
 <div class="container">
 
-  <!-- Sidebar (always visible) -->
+  <!-- Sidebar -->
   <div class="sidebar">
+    <label for="menu-toggle" class="close-btn">✖</label>
+
     <h3>Products</h3>
     <p>Keychains</p>
     <p>Single flowers</p>
     <p>Bouquets</p>
   </div>
 
-  <!-- Main Content -->
+  <!-- Main -->
   <div class="main">
     <h3>The Bloom Diaries</h3>
-    <p>
-      We are a small handmade brand dedicated to creating charming, aesthetic pieces that add a touch of joy to everyday life. 
+    <p>We are a small handmade brand dedicated to creating charming, aesthetic pieces that add a touch of joy to everyday life. 
       From delicate flower bouquets to playful keychains, bag charms, and bookmarks, every product is thoughtfully crafted using 
       pipe cleaners and fine details.
       <br><br>
@@ -35,8 +43,7 @@
       happiness with you. We also offer customization, allowing you to turn your ideas into something truly special.
       <br><br>
       At the heart of our brand is a simple idea: to turn small details into lasting impressions, and handmade creations into pieces 
-      you’ll love and cherish.
-    </p>
+      you’ll love and cherish.</p>
   </div>
 
 </div>
